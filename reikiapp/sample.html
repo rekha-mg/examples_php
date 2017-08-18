@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+    function verifyNull(){
+        if(!document.getElementById('username').value.trim().length){
+            alert('Please enter username');
+        }
+        else if(!document.getElementById('password').value.trim().length){
+            alert('Please enter password');
+        }
+    }
+    function verifyEmail(){
+        var x = document.getElementById('email').value;
+        var atpos = x.indexOf("@");
+        var dotpos = x.lastIndexOf(".");
+        if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+            alert("Not a valid e-mail address");
+        return false;
+        }
+    }
+</script>
+<title>Bài 2</title>
+</head>
+<body>
+    <form name = "myForm" method = "post" action = "reiki.html">
+        Username <input type = "text" id = "username" name = "username"/><br />
+        Password <input type = "password" id = "password" name = "password" /> <br />
+        Email <input type = "text" id = "email" name = "email"/> 
+        <input type = "submit" value = "Submit" onClick = "verifyNull();verifyEmail();"/>
+    </form>
+</body>
+javascript

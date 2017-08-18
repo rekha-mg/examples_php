@@ -1,0 +1,183 @@
+<html>
+
+<head>
+<style type="text/css">
+    
+body{
+  background-color:orange;
+  }
+
+.m1 .m2 .m3 .m4 .m5 {
+  color:purple;
+  border: 2px red;
+}
+  .buttonl{
+      padding-top: 30px;
+      padding-left: 50px;
+  }
+  
+  .one{
+      color:brown;
+     padding-left: 500px;
+     font-size: 20px;
+  }
+  .two{
+  font-size:12px;
+  color:aliceblue;
+  font-family: Courier;
+  }
+  .three{
+     color:brown;
+     padding-left: 500px;
+     font-size: 20px;
+     }
+
+     .buttonl{
+       padding-left: 500px;
+     }
+  img{
+      width:1280px;
+   height: 200px;
+  }
+hr{
+    height: 8px;
+    width: 100%;
+    background-color: orangered;
+}
+
+      
+
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+
+function hello()
+{
+   console.log("hi...");
+    /* var nm=document.myfrm.name.value;
+       var ed=document.myfrm.edu.value;
+     //document.write("Welcome"+nm);
+     if(nm==null ||nm=="")
+      {
+          alert("Enter ur name");
+          document.myfrm.name.focus();
+      }
+      else if(ed==null || ed=="")
+{
+    alert("Please enter ur highest qulification");
+    document.myfrm.ed.focus();
+}
+else
+{
+    alert("Welcome"+nm+" to quiz");
+}
+*/
+$.get("php_get.php?name="+document.myfrm.name.value).done(function(data) {
+    alert(data);
+  });
+/*var myans1,myans2, myans3,myans4,myans5;
+myans1="ORANGE"; myans2="RADDISH"; myans3="WEST"; myans4="EYES";myans5="RAINY";
+
+var ans1,ans2,ans3,ans4,ans5;
+    //ans1=document.myfrm.fruit.value;
+var ans1 = document.querySelector('input[name = "fruit"]:checked').value;
+var ans2 = document.querySelector('input[name = "veg"]:checked').value;
+var ans3 = document.querySelector('input[name = "sun"]:checked').value;
+var ans4 = document.querySelector('input[name = "organ"]:checked').value;
+var ans5 = document.querySelector('input[name = "season"]:checked').value;
+var points=0;
+//alert(ans1);
+
+if(ans1==myans1)
+{   points++;}
+
+if(ans2==myans2)
+{  points++;}
+if(ans3==myans3)
+{  points++;}
+if(ans4==myans4)
+{ points++;}
+if(ans5==myans5)
+{ points++;}
+
+//alert(points);
+  //window.location.href="sec.php?ppp="+points;
+
+//document.writeln("You entered " + ans1 + " for your fruit<br>");
+var xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange=function(){
+    if(this.getAllResponseHeaders==4 && this.status==200)
+    {
+         document.getElementById("demo").innerHTML=this.getResponseHeader("Thnak You");}
+};
+
+    */
+}
+</script>
+
+
+
+</head>
+<body>
+    <div><span >
+         <img src="./img1.jpg">
+         </span>
+
+        <h1> Kids Quiz below 8  years </h1>
+       
+        </div>
+
+        <hr>
+
+<div style="float:left; width :70%" >
+    
+<form name="myfrm">
+    <div class="one">
+<label> Name :</label> <input type="text" name="name"><br><br>
+<label> Class :</label> <input type="text" name="edu"> 
+<div class="two"> <p> Enter which class r u studying </p> </div>
+
+</div>
+
+<div class="three">
+    <div>
+    <p>1.Select the fruit in Orange color</p>
+<input type="radio" name="fruit" value="ORANGE">Orange 
+<input type="radio" name="fruit" value="Papaya">Papaya
+    </div>
+
+<div>
+    <p>2.Select the vegetable in Red color</p>
+<input type="radio" name="veg" value="RADDISH">Raddish
+<input type="radio" name="veg" value="Apple">Apple
+    </div>
+<div>
+<p> 3.Sun Sets in .......</p>
+<input type="radio" name="sun" value="eAST">East
+<input type="radio" name="sun" value="WEST">West
+</div>
+<div>
+<p> 4. We see with our .....</p>
+<input type="radio" name="organ" value="EYES">Eyes
+<input type="radio" name="organ" value="EARS">Ears
+</div>
+<div>
+    <p> 5. We wear raincoat in ......</p>
+<input type="radio" name="season"value="SUMMER">Summer
+<input type="radio" name="season" value="RAINY">Rainy
+
+
+</div>
+
+<div class="buttonl">
+<input type="submit"  onclick="hello()"  name="btn">
+</div>
+<div class="four">
+    <p id="demo">  </p>
+</div>
+</form>
+</body>
+</html>

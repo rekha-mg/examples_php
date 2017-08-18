@@ -1,0 +1,25 @@
+CREATE DATABASE student;
+DROP DATABASE student;
+
+CREATE TABLE students(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   CLASS   INT,       
+   PRIMARY KEY (ID)
+);
+
+INSERT INTO students (ID,NAME,AGE,ADDRESS,CLASS)
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 11 );
+
+SELECT * FROM students;
+
+UPDATE students
+SET ADDRESS = 'Pune'
+WHERE ID = 1;
+
+DELETE FROM students
+WHERE ID = 6;
+
+ALTER TABLE students ADD course int not null;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>REIKI BY GEETA</title>
+<script type="text/javascript" src="prgjs.js">
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<div class="w3-container w3-pink">
+<h6 class="w3-center w3-opacity w3-xxxlarge"  style="text-shadow:1px 1px 0 #444"> Reiki and Meditation </h6>
+</div>
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button  w3-large"  style="width: 10%" onclick= "openType('login')">Login</button>
+  <button class="w3-bar-item w3-button w3-large" style="width: 25%" onclick="openType('Meditation')">Meditation</button>
+  <button class="w3-bar-item w3-button w3-large" style="width: 25%"onclick="openType('Healing')">Healing</button>
+<button class="w3-bar-item w3-button w3-large" style="width: 15%" onclick="openType('Contact')">Contact Us</button>
+</div>
+
+<!tab1-------------------------->
+<div id="login" class="w3-container reiki">
+  <form class="w3-container"  name="myform" action="prg.php" onsubmit="return validation()"  method="post">
+  <p>
+  User Name:&nbsp<input  type="text"  name="uname" style="width:10%" required>
+  <br> <br>
+  Password:&nbsp<input  type="password" name="pswd" style="width:10%" required>
+  <br> <br>
+  <div id="newu" display:none;>
+  &nbsp&nbsp&nbsp&nbsp&nbspEmail :&nbsp&nbsp <input  type="text" name="em" id="eml" style="width:10%" required></p>
+  </div>
+  &nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" >
+  <br> <br>
+  <div id="btnnew">
+  <br>  New User--->  <button type="button" id="btn"  onclick="frmdisplay()"> Sign up </button>
+</div>
+
+
+  <p id="msg"> </p>
+</form>
+
+</div>
+<!tab2------------------------------->
+<div id="Meditation" class="w3-container reiki"  style="display:none">
+<div class="w3-card-4" style="width:100%">
+  <img src="Meditation.jpg" style="width:10%" alt="Norway" >
+  <p>  </p>
+  </div>
+  <h2>Meditation</h2>
+  <h2>Creating Time and Developing Focus</h2>
+<p> When teaching Reiki classes I often speak of “my Reiki meditations”. 
+ This stirs questions and comments from many of the students. 
+ Frequently students exclaim “I just can’t meditate”, “My mind is always wandering”, 
+ “I don’t have time to meditate”, “How do I use Reiki to help me learn to meditate”,
+  “I’ve meditated for years, why do I need to use Reiki?”
+
+It wasn’t until I began incorporating Reiki into my meditations that I began
+ to feel like I was really accomplishing something.  
+ I happen to be a Gemini with an Aquarius moon, talk about mental chatter!
+  So if I can learn to meditate with the help of Reiki, I believe anyone can!  .</p>
+
+
+<h2>The purpose of meditation</h2>
+<p>
+First let’s consider the purpose of meditation and the forms it can take.
+  Meditation is the art of creating a quiet mind and listening to the sound of silence. 
+   Where prayer is the act of talking with the Divine, meditation is the act of listening 
+   and truly hearing what God has to share with us. This can take place during special sacred 
+   moments that you set aside specifically for the purpose of meditation, or spontaneously.
+    Activities when spontaneous meditations often occur are while brushing your teeth, 
+    in the shower, hiking, running, washing the dishes, mowing the lawn and yes, we have
+     all had those auto-pilot moments while driving the car. </p>
+</div>  
+<!tab3---------------------------------------------------------------------------------------------->
+
+<div id="Healing" class="w3-container reiki" style="display:none">
+
+<div class="w3-card-4" style="width:100%">
+  <img src="reiki.jpg" style="width:10%" alt="Norway" >
+</div>
+   
+
+  <h2>Healing</h2>
+  <p class="w3-container"> Healing (literally meaning to make whole[1]) is the process of the restoration of health from an 
+    unbalanced, diseased or damaged organism.
+<br> 
+With physical damage or disease suffered by an organism, healing involves the repair of living tissue, organs and the biological system as a whole and resumption of normal functioning. It is the process by which the cells in the body regenerate and repair to reduce the size of a damaged or necrotic area and replace it with new living tissue. The replacement can happen in two ways: by regeneration in which the necrotic cells are replaced by new cells that form similar tissue as was originally there; or by repair in which injured tissue is replaced with scar tissue. Most organs will heal using a mixture of both mechanisms.
+<br>
+It is also referred to in the context of the grieving process.
+<br><br>
+<br><br>
+In psychiatry and psychology, healing is the process by which neuroses and psychoses are resolved to the degree that the client is able to lead a normal or fulfilling existence without being overwhelmed by psychopathological phenomena. This process may involve psychotherapy, pharmaceutical treatment or alternative approaches such as traditional spiritual healing..</p> 
+<br> </div>
+<!tab4----------------------------------------------------------------------------------------------- >
+<div id="Contact" class="w3-container reiki" style="display: none">
+  <h2>Contact Us </h2>
+  <p> Address : Geeta Muralidhar 
+     <br> #121 
+      <br>Street : Doctors Corner,Gokulam.
+      <br>City :Mysuru
+      <br>Pincode: 570021.
+  </p>
+  </div>
+
+
+
+<script>
+window.onload=function()
+{
+  document.getElementById("newu").style.visibility="hidden";
+}
+  
+function openType(ReikiType) {
+    var i;
+    var x = document.getElementsByClassName("reiki");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(ReikiType).style.display = "block";  
+}
+
+
+function frmdisplay()
+{
+  document.getElementById("newu").style.visibility="visible";
+  document.getElementById("btnnew").style.visibility="hidden";
+
+}
+</script>
+
+</body>
+</html>

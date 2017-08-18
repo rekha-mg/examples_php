@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Details </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<div class="w3-container w3-green">
+<h6 class="w3-center w3-xxxlarge"  style="text-shadow:1px 1px 0 #444"> Adminstrator... </h6>
+</div>
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button  w3-large"  style="width: 10%" onclick= "openType('uslist')">User List</button>
+  <button class="w3-bar-item w3-button w3-large" style="width: 25%" onclick="openType('umail')">Mail</button>
+  
+</div>
+
+<!tab1-------------------------->
+<div id="uslist" class="w3-container Admin" style="display:none">
+  <h3 class"w3-center "> List of Users </h3>
+  <br>
+ <a href=" display.php"> click here </a>
+
+
+</div>
+<!tab2----------------------->
+<div id='umail' class="w3-container Admin" style="display: none">
+<form class="w3-container"  name="myforms" action="prg2.php"onsubmit="return validation()"  method="post">
+          <ul>
+        <li>
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" />
+            </li>
+            <br>
+            <li>
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="email" />
+            </li>
+            <br>
+            <br> 
+            <li>
+            <label for="message">Message:</label><br>
+            <textarea name="message" cols="40" rows="6"></textarea>
+            </li>
+            <br>
+            <li>
+            <button class="submit" type="submit" value="Submit">Submit Form</button>
+            </li>
+       </ul>
+</form>
+
+</form>
+<!-------------------------------------------------------------------->
+
+<script>
+function openType(Rtype) {
+    var i;
+    var x = document.getElementsByClassName("Admin");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(Rtype).style.display = "block";  
+}
+</script>
+
+
+</body>
+
+</html>

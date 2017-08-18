@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<script type="text/javascript">
+
+function hello()
+{
+    /* var nm=document.myfrm.name.value;
+       var ed=document.myfrm.edu.value;
+     //document.write("Welcome"+nm);
+     if(nm==null ||nm=="")
+      {
+          alert("Enter ur name");
+          document.myfrm.name.focus();
+      }
+      else if(ed==null || ed=="")
+{
+    alert("Please enter ur highest qulification");
+    document.myfrm.ed.focus();
+}
+else
+{
+    alert("Welcome"+nm+" to quiz");
+}*/
+var myans1,myans2, myans3,myans4,myans5;
+myans1="ORANGE"; myans2="RADDISH"; myans3="WEST"; myans4="EYES";myans5="RAINY";
+
+var ans1,ans2,ans3,ans4,ans5;
+    //ans1=document.myfrm.fruit.value;
+var ans1 = document.querySelector('input[name = "fruit"]:checked').value;
+var ans2 = document.querySelector('input[name = "veg"]:checked').value;
+var ans3 = document.querySelector('input[name = "sun"]:checked').value;
+var ans4 = document.querySelector('input[name = "organ"]:checked').value;
+var ans5 = document.querySelector('input[name = "season"]:checked').value;
+var points=0;
+//alert(ans1);
+
+if(ans1==myans1)
+{   points++;}
+
+if(ans2==myans2)
+{  points++;}
+if(ans3==myans3)
+{  points++;}
+if(ans4==myans4)
+{ points++;}
+if(ans5==myans5)
+{ points++;}
+
+alert(points);
+
+}
+//document.writeln("You entered " + ans1 + " for your fruit<br>");
+
+</script>
+<body>
+<div>
+<form name="myfrm">
+    <div class="one">
+<label> Name :</label> <input type="text" name="name">
+<label> Class :<input type="text" name="edu"> 
+<div class="two">
+<p> Enter which class r u studying </p>
+</div>
+</div>
+
+<div class="three">
+    <p>1.Select the fruit in Orange color</p>
+<input type="radio" name="fruit" value="ORANGE">Orange 
+<input type="radio" name="fruit" value="Papaya">Papaya
+    </div>
+
+<div>
+    <p>2.Select the vegetable in Red color</p>
+<input type="radio" name="veg" value="RADDISH">Raddish
+<input type="radio" name="veg" value="Apple">Apple
+    </div>
+<div>
+<p> 3.Sun Sets in .......</p>
+<input type="radio" name="sun" value="eAST">East
+<input type="radio" name="sun" value="WEST">West
+</div>
+<div>
+<p> 4. We see with our .....</p>
+<input type="radio" name="organ" value="EYES">Eyes
+<input type="radio" name="organ" value="EARS">Ears
+</div>
+<div>
+    <p> 5. We wear raincoat in ......</p>
+<input type="radio" name="season"value="SUMMER">Summer
+<input type="radio" name="season" value="RAINY">Rainy
+</form>
+
+</div>
+<div class="four">
+<input type="button" onclick="hello()" name="btn" value="SUBMIT">
+</div>
+</body>
+</html>
